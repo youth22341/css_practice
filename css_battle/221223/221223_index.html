@@ -1,0 +1,164 @@
+<html>
+<head>
+  <style>
+    /* global variables */
+    :root{
+      --column_width:400px;
+      --row_height:300px;
+      --column_gap:10px;
+      --row_gap: 10px;
+      /* define and set more values for global variables here */
+    }
+
+    /* first setting to reset style */
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    /* structure for whole document */
+    body{
+      display:grid;
+      grid-template-columns: repeat(2,var(--column_width));
+      grid-template-rows: repeat(2,var(--row_height));
+      column-gap: var(--column_gap);
+      row-gap: var(--row_gap);
+    }
+     
+    .workspace{
+      position:relative;
+      grid-column:1/2;
+      grid-row:1/2;
+      width:100%;
+      height:100%;
+      /* setting more properties for workspace area */
+      background-color:#92278F;
+    }
+
+    .target{
+      grid-column:2/3;
+      grid-row:1/2;
+    }
+
+    .information{
+      grid-column:1/3;
+      grid-row:2/3;
+      font-size:30px;
+      justify-self: center;
+      align-self: center;
+    }
+
+    /* making (workspace) challenge starts from here */
+    .rec_ver, .rec_hor{
+      position:absolute;
+      background-color:#FFF579;
+    }
+    .rec_ver{
+      width:30px;
+    }
+
+    .rec-1, .rec-2, .rec-3, .rec-4{
+      height:60px;
+    }
+
+    .rec-1{
+      left:65px;
+      top:75px;
+    }
+
+    .rec-2{
+      left:305px;
+      top:75px;
+    }
+
+    .rec-3{
+      left:65px;
+      top:165px;
+    }
+
+    .rec-4{
+      left:305px;
+      top:165px;
+    }
+
+    .rec-5, .rec-6{
+      height:150px;
+    }
+    
+    .rec-5{
+      left:125px;
+      top:75px;
+    }
+
+    .rec-6{
+      left:245px;
+      top:75px;
+    }
+
+    .rec-7{
+      left:185px;
+      top:135px;
+      height:165px;
+    }
+
+    .rec_hor{
+      height:30px;
+    }
+
+    .rec-8, .rec-9{
+      width:90px;
+      left:155px;
+    }
+
+    .rec-8{
+      top:75px;
+    }
+
+    .rec-9{
+      top:135px;
+    }
+
+    .rec-10{
+      left:65px;
+      top:195px;
+      width:270px;
+    }    
+
+  </style>
+</head>
+
+<body>
+  <div class="workspace">
+    <div class="rec_ver rec-1">
+    </div>
+    <div class="rec_ver rec-2">
+    </div>
+    <div class="rec_ver rec-3">
+    </div>
+    <div class="rec_ver rec-4">
+    </div>
+    <div class="rec_ver rec-5">
+    </div>
+    <div class="rec_ver rec-6">
+    </div>
+    <div class="rec_ver rec-7">
+    </div>
+    <div class="rec_hor rec-8">
+    </div>
+    <div class="rec_hor rec-9">
+    </div>
+    <div class="rec_hor rec-10">
+    </div>
+  </div>
+  <div class="target">
+    <img src="221223_target.png" alt="">
+  </div>
+  <div class="information">
+    <p>
+      <strong>RESULT</strong><br>
+      <strong>% match: </strong>100% <br>
+      <strong>Highest score: </strong>600
+    </p>
+  </div>
+</body>
+</html>
