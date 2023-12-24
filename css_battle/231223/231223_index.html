@@ -91,3 +91,35 @@
   </div>
 </body>
 </html>
+
+<!-- Another solution for this problem: only using one class (inside class "workspace") name "layer" and using linear-gradient + clip-path to do:
+I don't know how percentage of correct I get from this way, but I'm sure my score will get higher because it less characters.
+I only paste the code inside the <style> tag -->
+<!-- <style>
+    *{
+      margin:0;
+    }
+
+    .layer{
+      position:absolute;
+      width:400px;
+      height:300px;
+      background:linear-gradient(to bottom,#FFF45F 43.33%,#0098D1 43.33%,#0098D1 56.67%,#FFF45F 0)
+    }
+
+    .layer::before{
+      position:absolute;
+      background:#403571;
+      content:" "; <!-- never forget this line -->
+<!-- Here are the side of box you will cut, not the size of the region after using clip-path -->
+      width:400px;
+      height:300px;
+      clip-path:polygon(
+        30% 16.67%,
+        70% 16.67%,
+        70% 83.33%,
+        30% 83.33%
+      );
+    }
+  </style> -->
+
