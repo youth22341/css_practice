@@ -1,0 +1,89 @@
+<!-- The place where I get these challenges: https://cssbattle.dev/ -->
+<html>
+<head>
+  <style>
+    /* global variables */
+    :root{
+      --column_width:400px;
+      --row_height:300px;
+      --column_gap:10px;
+      --row_gap: 10px;
+      /* define and set more values for global variables here */
+    }
+
+    /* first setting to reset style */
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    /* structure for whole document */
+    body{
+      display:grid;
+      grid-template-columns: repeat(2,var(--column_width));
+      grid-template-rows: repeat(2,var(--row_height));
+      column-gap: var(--column_gap);
+      row-gap: var(--row_gap);
+    }
+     
+    .workspace{
+      position:relative;
+      grid-column:1/2;
+      grid-row:1/2;
+      width:100%;
+      height:100%;
+      /* setting more properties for workspace area */
+      background:#7BAFDE;
+    }
+
+    .target{
+      grid-column:2/3;
+      grid-row:1/2;
+    }
+
+    .information{
+      grid-column:1/3;
+      grid-row:2/3;
+      font-size:30px;
+      justify-self: center;
+      align-self: center;
+    }
+
+    /* making (workspace) challenge starts from here */
+    .rec{
+      width:100px;
+      height:100px;
+      top:100px;
+    }
+    .rec-1{
+      position:absolute;
+      background:#6867D4;
+      left:100px;
+      transform: skewY(26deg);
+    }
+    .rec-2{
+      position:absolute;
+      background:#000039;
+      left:200px;
+      transform: skewY(-26deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="workspace">
+    <div class="rec rec-1"></div>
+    <div class="rec rec-2"></div>
+  </div>
+  <div class="target">
+    <img src="311223_target.png" alt="">
+  </div>
+  <div class="information">
+    <p>
+      <strong>RESULT</strong><br>
+      <strong>% match: </strong>100%<br>
+      <strong>Highest score: </strong>628.54
+    </p>
+  </div>
+</body>
+</html>
