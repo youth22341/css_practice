@@ -1,0 +1,4 @@
+<p a><p b><style>*{margin:0;background:#302954}p{position:absolute}
+p[a]{width:260;height:120;background:#FDDDCE;left:70;
+top:90;border-radius:60px}p[b]{width:120;height:120;
+background:#302954;left:140;top:90;transform:rotate(45deg)}
