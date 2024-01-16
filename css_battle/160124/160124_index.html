@@ -1,0 +1,98 @@
+<!-- The place where I get these challenges: https://cssbattle.dev/ -->
+<html>
+<head>
+  <style>
+    /* global variables */
+    :root{
+      --column_width:400px;
+      --row_height:300px;
+      --column_gap:10px;
+      --row_gap: 10px;
+      /* define and set more values for global variables here */
+    }
+
+    /* first setting to reset style */
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    /* structure for whole document */
+    body{
+      display:grid;
+      grid-template-columns: repeat(2,var(--column_width));
+      grid-template-rows: repeat(2,var(--row_height));
+      column-gap: var(--column_gap);
+      row-gap: var(--row_gap);
+    }
+     
+    .workspace{
+      position:relative;
+      grid-column:1/2;
+      grid-row:1/2;
+      width:100%;
+      height:100%;
+      /* setting more properties for workspace area */
+      background:#002A6B;
+    }
+
+    .target{
+      grid-column:2/3;
+      grid-row:1/2;
+    }
+
+    .information{
+      grid-column:1/3;
+      grid-row:2/3;
+      font-size:30px;
+      justify-self: center;
+      align-self: center;
+    }
+
+    /* making (workspace) challenge starts from here */
+    .triangle{
+      position:fixed;
+      border-top:90px solid #C7E7FB;
+      border-left:90px solid transparent;
+      left:110px;top:75px;
+      border-right:90px solid transparent;
+    }
+
+    .square{
+      position:fixed;
+      width:85px;height:85px;
+      background:conic-gradient(#5CC4F4 0 37.5%,#C7E7FB 37.5%62.5%,#002A6B 0 87.5%,#5CC4F4 0);
+      &.square-1{
+        left:97px;top:122px;
+        rotate:-45deg;
+      }
+      &.square-2{
+        transform:scaleY(-1) rotate(135deg);
+        left:217px;top:122px;
+      }
+    }  
+  </style>
+</head>
+
+<body>
+  <div class="workspace">
+    <div class="triangle"></div>
+    <div class="square square-1"></div>
+    <div class="square square-2"></div>
+  </div>
+  <div class="target">
+    <img src="160124_target.png" alt="">
+  </div>
+  <div class="information">
+    <p>
+      <strong>RESULT</strong><br>
+      <strong>% match: </strong>99.8%<br>
+      <strong>Highest score: </strong>595.43
+    </p>
+  </div>
+</body>
+</html>
+
+<!--Code minified:
+<p><m a><m b><style>*{margin:0;background:#002A6B}p,m{position:fixed}p{border-top:solid+90px#C7E7FB;border-left:solid+90px transparent;left:110;top:75;border-right:solid+90px transparent}m{width:85;height:85;background:conic-gradient(#5CC4F4 0 37.5%,#C7E7FB 37.5%62.5%,#002A6B 0 87.5%,#5CC4F4 0)}[a]{left:97;top:122;rotate:-45deg}[b]{transform:scaleX(-1) rotate(270deg);left:85;top:85}
+-->
