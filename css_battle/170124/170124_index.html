@@ -1,0 +1,91 @@
+<!-- The place where I get these challenges: https://cssbattle.dev/ -->
+<html>
+<head>
+  <style>
+    /* global variables */
+    :root{
+      --column_width:400px;
+      --row_height:300px;
+      --column_gap:10px;
+      --row_gap: 10px;
+      /* define and set more values for global variables here */
+    }
+
+    /* first setting to reset style */
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    /* structure for whole document */
+    body{
+      display:grid;
+      grid-template-columns: repeat(2,var(--column_width));
+      grid-template-rows: repeat(2,var(--row_height));
+      column-gap: var(--column_gap);
+      row-gap: var(--row_gap);
+    }
+     
+    .workspace{
+      position:relative;
+      grid-column:1/2;
+      grid-row:1/2;
+      width:100%;
+      height:100%;
+      /* setting more properties for workspace area */
+      background:#D8B788;
+    }
+
+    .target{
+      grid-column:2/3;
+      grid-row:1/2;
+    }
+
+    .information{
+      grid-column:1/3;
+      grid-row:2/3;
+      font-size:30px;
+      justify-self: center;
+      align-self: center;
+    }
+
+    /* making (workspace) challenge starts from here */
+    .shape{
+      position:fixed;
+      background:#684C3B;border-radius:10px;
+      &.shape-1{
+        width:120px;height:180px;
+        left:140px;top:70px;
+        background:linear-gradient(to bottom,#684C3B 11.1%,#D8B788 11.1%22.2%,#684C3B 0);
+      }
+      &.shape-2{
+        width:40px;height:30px;
+        left:180px;top:50px;
+      }
+      &.shape-3{
+        width:20px;height:80px;background:#D8B788;
+        left:170px;top:140px;
+        -webkit-box-reflect:right 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="workspace">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="target">
+    <img src="170124_target.png" alt="">
+  </div>
+  <div class="information">
+    <p>
+      <strong>RESULT</strong><br>
+      <strong>% match: </strong>100%<br>
+      <strong>Highest score: </strong>613.96
+    </p>
+  </div>
+</body>
+</html>
